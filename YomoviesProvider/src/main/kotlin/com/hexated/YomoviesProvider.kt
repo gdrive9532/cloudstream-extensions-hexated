@@ -10,9 +10,9 @@ import org.jsoup.nodes.Element
 import java.net.URI
 
 open class YomoviesProvider : MainAPI() {
-    override var mainUrl = "https://yomovies.show"
+    override var mainUrl = "https://prmovies.fan/"
     private var directUrl = ""
-    override var name = "Yomovies"
+    override var name = "Prmovies"
     override val hasMainPage = true
     override var lang = "hi"
     override val supportedTypes = setOf(
@@ -22,9 +22,14 @@ open class YomoviesProvider : MainAPI() {
 
     override val mainPage = mainPageOf(
         "most-favorites" to "Most Viewed",
-        "genre/web-series" to "Web Series Movies",
-        "genre/dual-audio" to "Dual Audio Movies",
+        "genre/trending" to "Trending Movies",
+        "genre/hollywood-dubbed" to "Hollywood Dubbed Movies",
+        "genre/south-dubbed" to "South Dubbed Movies",
         "genre/bollywood" to "Bollywood Movies",
+        "genre/netflix" to "Netflix Web Series Movies",
+        "genre/hotstar" to "Hotstar Web Series Movies",
+        "genre/zee5" to "Zee5 Web Series Movies",
+        "genre/voot" to "Voot Web Series Movies",
         "genre/tv-shows" to "TV Shows Movies",
         "genre/hollywood" to "Hollywood Movies",
         "series" to "All TV Series",
